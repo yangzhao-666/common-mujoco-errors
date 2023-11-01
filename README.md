@@ -6,7 +6,8 @@ Keywords | Solved?
 GL/glew.h | ✅
 libcusolver | ✅
 ffmpeg | ❌
-
+CompileError | ✅
+cython 3 | ✅
 
 
 -----
@@ -35,5 +36,23 @@ Comments:
 Solution: 
 
 Comments:
+
+-----
+
+#### CompileError
+`distutils.errors.CompileError: command '/GCCcore/11.3.0/bin/gcc' failed with exit code 1`
+
+Solution: module load GCC/8.3.0
+
+Comments: the loaded gcc cannot correctly compile the file, so we need to load the right version. 
+
+-----
+
+#### cython 3
+`Mujoco-py is incompatible with cython 3 (Cannot assign type 'void (const char *) except * nogil' to 'void (*)(const char *) noexcept nogil)`
+
+Solution: `pip install "cython<3"`
+
+Comments: 
 
 -----
